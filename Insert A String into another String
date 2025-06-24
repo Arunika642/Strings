@@ -1,0 +1,34 @@
+Using predefined methods:
+
+public class EvenLength {
+    public static void main(String[] args)
+    {
+        String s = "GeeksGeeks";
+        String t = "For";
+        int index = 4;
+        String str = " ";
+        str = str + s.substring(0,index+1) + t + s.substring(index+1);
+        System.out.println(str);
+
+    }
+}
+
+Without using predefined methods
+public class EvenLength {
+    public static void main(String[] args)
+    {
+        String s = "GeeksGeeks";
+        String t = "For";
+        int index = 4;
+        String str = " ";
+        for(int i=0; i<s.length();i++)
+        {
+            str+= s.charAt(i);
+            if(i==index)
+            {
+                str+= t;
+            }
+        }
+        System.out.println(str);
+    }
+}
