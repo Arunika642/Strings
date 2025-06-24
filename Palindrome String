@@ -1,8 +1,9 @@
 public class EvenLength {
     public static void main(String[] args)
     {
-        String s = "AbbA";
-        char[] ch = s.toCharArray();
+        String s = "AbBA";
+        String s1 = s.toLowerCase();
+        char[] ch = s1.toCharArray();
         int n = ch.length;
         for(int i=0; i<n/2;i++)
         {
@@ -11,7 +12,7 @@ public class EvenLength {
             ch[n-1-i] = temp;
         }
         String str = new String(ch);
-        System.out.println(str.equals(s));
+        System.out.println(str.equals(s1));
     }
 }
 
